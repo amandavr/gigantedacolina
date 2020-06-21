@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
-import api from '../../services/api';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, Text } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 
 export default class Lojas extends Component {
 
     render () {
         return (
-            <View>
-                <Text> lojas </Text>
-              
-            </View>
+            // <View>
+            //     <Text> lojas </Text>
+            // </View>
+             <WebView source={{ uri: 'http://lojasgigantedacolina.com.br/index_old.html' }} />
         );
     }
 }
