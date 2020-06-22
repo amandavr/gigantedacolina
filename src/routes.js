@@ -96,7 +96,7 @@ export default function Routes() {
   return (
     // <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeTabs} />
+        <Stack.Screen name="Home" component={HomeTabs} options={{ title: 'gigante', headerShown: false }}/>
         <Stack.Screen name="Product" component={Product} />
         <Stack.Screen name="LojaWhats" component={LojaWhats} />
       </Stack.Navigator>

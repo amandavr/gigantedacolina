@@ -3,14 +3,18 @@ import { View, Text, Button, FlatList, StyleSheet, Image } from 'react-native';
 import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
 import { color } from 'react-native-reanimated';
 import { createStackNavigator } from "@react-navigation/stack"
+import { useRoute, useNavigation } from '@react-navigation/native';
+
 
 
 
 export default class Home extends Component {
 
-    static navigationOptions = {
-        title: 'teste',
-    };
+    // static navigationOptions = {
+    //     title: 'teste',
+    //     header: null,
+    //     headerShown: false,
+    // };
 
 
     state = {
