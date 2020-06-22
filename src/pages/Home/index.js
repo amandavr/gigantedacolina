@@ -75,7 +75,10 @@ export default class Home extends Component {
     render () {
 
         return (
-            <View>
+            <View style={styles.container}>
+                <View style={styles.containerLogo}>
+                    <Image source={require('./gigantedacolina.png')} style={styles.logo} />
+                </View>
                 <FlatList
                 data={this.state.data}
                 keyExtractor={item => item.id}
@@ -88,6 +91,18 @@ export default class Home extends Component {
 
 
 const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#fff',
+        flex: 1
+    },
+    containerLogo: {
+        margin: 20,
+        alignItems: 'center',
+    },
+    logo: {
+        width: 150,
+        height: 100
+    },
     row: {
         flexDirection: 'row',
         borderBottomWidth: 1,
