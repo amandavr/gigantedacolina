@@ -45,12 +45,15 @@ export default class Home extends Component {
     renderItem = ({ item }) => (
 
         <View style={styles.row}>
-                <View style={styles.image}>
-                    <Image source={{ uri: item.image }}/>
-                </View>
-                <View style={styles.info}>
-                    <Text style={styles.title}>{item.title}</Text>
-                    <Text style={styles.price}>{item.price}</Text>
+            <View style={styles.image}>
+                <Image source={{uri: item.image }}
+                    style={styles.image} />
+                        {/* style={{width: 100, height: 100}} /> */}
+            </View>
+            <View style={styles.info}>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.price}>{item.price}</Text>
+                <View style={styles.containerButtons}>
                     <TouchableOpacity style={styles.button} 
                         onPress={() => { 
                             this.props.navigation.navigate("Product", { product: item }); 
@@ -69,6 +72,7 @@ export default class Home extends Component {
                     </TouchableOpacity>  
                 </View>
             </View>
+        </View>
     )
 
 
@@ -110,7 +114,9 @@ const styles = StyleSheet.create({
         padding:20
     },
     image: {
-
+        width: 100,
+        height: 100,
+        marginRight: 20
     },
     info: {
         flex: 1,
@@ -134,7 +140,11 @@ const styles = StyleSheet.create({
     },
     buttonTxt: {
         color: '#fff',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 10,
+    },
+    containerButtons: {
+        flexDirection: 'row',
     }
 });
 
